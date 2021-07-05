@@ -1,4 +1,4 @@
-@foreach ($errors->all() as $error)
+{{-- @foreach ($errors->all() as $error)
     <div class="error">{{ $error }}</div>
 @endforeach
 
@@ -14,4 +14,4 @@
     <input type="password" name="password_confirmation" value=""><br>
     <br>
     <button>Register</button>
-</form>
+</form> --}}

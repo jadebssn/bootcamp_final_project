@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 
 export default function Register(props) {
+    let history = useHistory();
 
     const [{email, name, password, password_confirmation}, setValues] = useState({
         email: '',
@@ -24,6 +26,7 @@ export default function Register(props) {
             }
         });
         const response_data = await response.json();
+        history.push('/courses');
 
         // do anything you want
     }

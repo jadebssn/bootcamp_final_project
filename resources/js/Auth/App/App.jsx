@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Login from '../Login/Login';
 import Logout from '../Logout/Logout';
 import Register from '../Register/Register';
+import Courses from '../../Courses/Courses';
 
 export default function App() {
 
@@ -55,6 +56,11 @@ export default function App() {
                 <Route exact path="/sign-up">
                     <Register />
                 </Route>
+                    
+                <Route exact path="/courses">
+                    <Courses />
+                </Route>
+                    
             </Switch>
         )
     )

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 
 export default function Login({ loginCallback }) {
+    let history = useHistory();
+
 
     const [{email, password}, setValues] = useState({
         email: '',
@@ -8,7 +11,7 @@ export default function Login({ loginCallback }) {
     })
 
     const handleSubmit = async (event) => {
-
+        
         event.preventDefault();
 
         // let request_data = {email, password};
@@ -47,6 +50,7 @@ export default function Login({ loginCallback }) {
 
         localStorage.setItem('my_token', token);
         localStorage.setItem('user_data', JSON.stringify(data));
+        history.push('/courses');
     }
 
     const handleChange = (event) => {
@@ -62,6 +66,7 @@ export default function Login({ loginCallback }) {
             });
         }
     }
+   
 
     return (
         <form action="/login" method="post" onSubmit={ handleSubmit }>

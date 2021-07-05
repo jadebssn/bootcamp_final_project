@@ -17,8 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/sign-in', 'auth.react-auth');
-Route::view('/sign-up', 'auth.react-auth');
+Route::view('/sign-in', 'auth.react-auth')->name('sign-in');
+Route::view('/sign-up', 'auth.react-auth')->name('sign-up');
+Route::get('/courses', 'CourseController@index');
+Route::get('/courses/{id}', 'CourseController@show');
 
 
 //code bellow is an example for our courses reservation 
