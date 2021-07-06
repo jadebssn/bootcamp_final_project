@@ -26,7 +26,7 @@ export default function App() {
         console.log(data);
         if (data && data.message === 'success') {
             console.log('in');
-            setUser(data);
+            setUser(data.user);
         } else {
             setUser(null);
         }
@@ -39,13 +39,18 @@ export default function App() {
         // to find out if he's logged in or not
         loadUsersData();
 
+
     }, []);
+    console.log('user', user);
 
             
     return (
 
         user ? (
             <Switch>
+                <Route exact path="/">
+                    <h1>Home</h1>
+                </Route>
                 <Route exact path="/courses">
                     <Courses  logoutCallback={() => {
                         setUser(null);
@@ -57,11 +62,18 @@ export default function App() {
                         setUser(null);
                     }}/>
                 </Route>
+
+                <Route path="*">
+                    <Redirect to="/courses"/>
+                </Route>
                 
             </Switch>
         ) : (
             
             <Switch>
+                <Route exact path="/">
+                    <h1>Home</h1>
+                </Route>
                 <Route exact path="/sign-in">
                     <Login loginCallback={ (user) => {
                         setUser(user);
@@ -72,9 +84,9 @@ export default function App() {
                     <Register />
                 </Route>
                 
-                {/* <Route path="*">
+                <Route path="*">
                     <Redirect to="/sign-in"/>
-                </Route> */}
+                </Route>
                 
                     
             </Switch>

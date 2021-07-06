@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 
 export default function Login({ loginCallback }) {
@@ -112,7 +112,7 @@ export default function Login({ loginCallback }) {
             <button>Login</button>
 
         </form>
-          <p>Not registered yet? <a href="sign_up.html">Sign up</a></p>
+          <p>Not registered yet? <Link to="/sign-up">Sign up</Link></p>
         
       </div>
     </div>

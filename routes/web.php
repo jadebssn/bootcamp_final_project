@@ -13,10 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+Route::view('/', 'auth.react-auth');
 Route::view('/sign-in', 'auth.react-auth')->name('sign-in');
 Route::view('/sign-up', 'auth.react-auth')->name('sign-up');
 //i added logout
