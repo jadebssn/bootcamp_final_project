@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix");
 
 /*
  |--------------------------------------------------------------------------
@@ -11,19 +11,25 @@ const mix = require('laravel-mix');
  |
  */
 
-// mix.js('resources/js/app.js', 'public/js')
-//     .postCss('resources/css/app.css', 'public/css', [
-//         //
-//     ]);
-mix.js('resources/js/Auth/index.jsx', 'public/js/auth.js').react();
-
+mix.js("resources/js/app.js", "public/js").postCss(
+    "resources/css/app.css",
+    "public/css",
+    [
+        //
+    ]
+);
+mix.js("resources/js/Auth/index.jsx", "public/js/auth.js").react();
+mix.sass("resources/scss/app.scss", "public/css").sass(
+    "resources/scss/login.scss",
+    "public/css/login"
+);
 mix.browserSync({
-        host: 'localhost',
-        port: 3000,
-        proxy: {
-            target: process.env.APP_URL // Yay! Using APP_URL from the .env file!
-        }
-    });
+    host: "localhost",
+    port: 3000,
+    proxy: {
+        target: process.env.APP_URL, // Yay! Using APP_URL from the .env file!
+    },
+});
 
 // add versioning
 mix.version();
