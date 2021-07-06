@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
-import "../../../scss/login.scss"; 
 
 export default function Login({ loginCallback }) {
     let history = useHistory();
@@ -74,7 +73,7 @@ export default function Login({ loginCallback }) {
       <div className="form">
         <br />
         <br />
-        <form className="login-form">
+        
           <svg
             id="Capa_1"
             enable-background="new 0 0 512 512"
@@ -111,7 +110,7 @@ export default function Login({ loginCallback }) {
 
         </form>
           <p>Not registered yet? <a href="sign_up.html">Sign up</a></p>
-        </form>
+        
       </div>
     </div>
     );

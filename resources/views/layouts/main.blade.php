@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title }} | Final project</title>
 
-    {{-- <link rel="stylesheet" href="{{ mix('css/style.css') }}"> --}}
+    <link rel="stylesheet" href="{{ mix('css/login.css') }}">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
@@ -16,7 +16,7 @@
         'current' => $current_menu_item ?? null
     ])
 
-    <h1>Final project</h1>
+    <h1>Final project</h1>s
 
     <main>
 

@@ -11,17 +11,18 @@ const mix = require("laravel-mix");
  |
  */
 
-mix.js("resources/js/app.js", "public/js").postCss(
+mix.js("resources/js/app.js", "public/js");
+/*.postCss(
     "resources/css/app.css",
     "public/css",
     [
         //
     ]
-);
+);*/
 mix.js("resources/js/Auth/index.jsx", "public/js/auth.js").react();
 mix.sass("resources/scss/app.scss", "public/css").sass(
     "resources/scss/login.scss",
-    "public/css/login"
+    "public/css/login.css"
 );
 mix.browserSync({
     host: "localhost",
