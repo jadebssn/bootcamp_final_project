@@ -16,7 +16,9 @@
         'current' => $current_menu_item ?? null
     ])
 
-    <h1>Final project</h1>s
+    <h1>Final project</h1>
+
+    
 
     <main>
 

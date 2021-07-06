@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 
+
 export default function Login({ loginCallback }) {
     let history = useHistory();
 
@@ -46,11 +47,13 @@ export default function Login({ loginCallback }) {
 
         if (data.message === 'success') {
             loginCallback(user);
+
+            localStorage.setItem('my_token', token);
+            localStorage.setItem('user_data', JSON.stringify(data));
+            history.push('/courses');
         }
 
-        localStorage.setItem('my_token', token);
-        localStorage.setItem('user_data', JSON.stringify(data));
-        history.push('/courses');
+        
     }
 
     const handleChange = (event) => {

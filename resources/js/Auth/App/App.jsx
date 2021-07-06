@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Login from '../Login/Login';
 import Logout from '../Logout/Logout';
@@ -41,25 +41,41 @@ export default function App() {
 
     }, []);
 
+            
     return (
+
         user ? (
-            <Logout logoutCallback={() => {
-                setUser(null);
-            }}/>
+            <Switch>
+                <Route exact path="/courses">
+                    <Courses  logoutCallback={() => {
+                        setUser(null);
+                    }}/>
+                </Route>
+
+                <Route exact path="/logout">
+                    <Logout logoutCallback={() => {
+                        setUser(null);
+                    }}/>
+                </Route>
+                
+            </Switch>
         ) : (
+            
             <Switch>
                 <Route exact path="/sign-in">
                     <Login loginCallback={ (user) => {
                         setUser(user);
                     }}/>
                 </Route>
+                    
                 <Route exact path="/sign-up">
                     <Register />
                 </Route>
-                    
-                <Route exact path="/courses">
-                    <Courses />
-                </Route>
+                
+                {/* <Route path="*">
+                    <Redirect to="/sign-in"/>
+                </Route> */}
+                
                     
             </Switch>
         )

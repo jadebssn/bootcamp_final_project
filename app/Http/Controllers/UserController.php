@@ -47,5 +47,10 @@ class UserController extends Controller
         $user = Auth::user();
 
         $user->tokens()->delete();
+
+        return [
+            'message' => 'success',
+            'user' => null
+        ];
     }
 }

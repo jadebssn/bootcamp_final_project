@@ -19,7 +19,10 @@ Route::get('/', function () {
 
 Route::view('/sign-in', 'auth.react-auth')->name('sign-in');
 Route::view('/sign-up', 'auth.react-auth')->name('sign-up');
-Route::get('/courses', 'CourseController@index');
+//i added logout
+// Route::view('/logout', 'auth.react-auth')->name('logout');
+Route::view('/courses', 'auth.react-auth');
+//Route::get('/courses', 'CourseController@index');
 Route::get('/courses/{id}', 'CourseController@show');
 
 

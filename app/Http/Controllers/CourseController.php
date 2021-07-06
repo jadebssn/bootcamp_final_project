@@ -12,7 +12,7 @@ class CourseController extends Controller
         $courses = Course::all();
         // return 'hi';
 
-        return view('courses.index', compact('courses'));
+        return $courses;
     
 }
 

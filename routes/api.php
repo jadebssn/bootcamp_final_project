@@ -21,3 +21,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('token', 'UserController@token');
 Route::get('user', 'UserController@user')->middleware('auth:sanctum');
 Route::post('logout', 'UserController@logout')->middleware('auth:sanctum');
+Route::get('courses', 'CourseController@index');
