@@ -22,3 +22,4 @@ Route::post('token', 'UserController@token');
 Route::get('user', 'UserController@user')->middleware('auth:sanctum');
 Route::post('logout', 'UserController@logout')->middleware('auth:sanctum');
 Route::get('courses', 'CourseController@index');
+Route::get('course/{id}', 'CourseController@show');

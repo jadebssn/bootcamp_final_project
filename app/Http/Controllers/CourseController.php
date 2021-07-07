@@ -18,8 +18,8 @@ class CourseController extends Controller
 
     public function show($id)
     {
-        $courses = Course::findOrFail($id);
+        $course = Course::findOrFail($id);
 
-        return view('courses.show', compact('courses'));
+        return $course;
     }
 }

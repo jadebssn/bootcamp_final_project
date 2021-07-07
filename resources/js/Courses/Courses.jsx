@@ -30,7 +30,8 @@ export default function Courses(props) {
         <Logout logoutCallback={props.logoutCallback} />
         
 
-           {coursesList.map((course, i) => (<Course course={course} />))} 
+            {coursesList.map((course, i) => (<Course key={i} course={course} />))}
+            
             
             {/* {new Array(4).fill(null).map((course, i) => (<Course course={course} />))} */}
 

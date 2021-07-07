@@ -5,6 +5,9 @@ import Login from '../Login/Login';
 import Logout from '../Logout/Logout';
 import Register from '../Register/Register';
 import Courses from '../../Courses/Courses';
+import Welcome from '../../Welcome/Welcome';
+import CourseDetail from "../../CourseDetail/CourseDetail";
+
 
 export default function App() {
 
@@ -49,7 +52,7 @@ export default function App() {
         user ? (
             <Switch>
                 <Route exact path="/">
-                    <h1>Home</h1>
+                    <Welcome />
                 </Route>
                 <Route exact path="/courses">
                     <Courses  logoutCallback={() => {
@@ -63,16 +66,29 @@ export default function App() {
                     }}/>
                 </Route>
 
+                 <Route path="/course/:id">
+                    <CourseDetail/>
+                </Route> 
+
                 <Route path="*">
                     <Redirect to="/courses"/>
                 </Route>
+
+                {/* <Route exact path="/course/:id">
+                    <CourseDetail  logoutCallback={() => {
+                        setUser(null);
+                    }}/>
+                </Route> */}
+
+               
                 
             </Switch>
         ) : (
             
             <Switch>
-                <Route exact path="/">
-                    <h1>Home</h1>
+                    <Route exact path="/">
+                        <Welcome />
+                    {/* <h1>Home</h1> */}
                 </Route>
                 <Route exact path="/sign-in">
                     <Login loginCallback={ (user) => {
@@ -87,7 +103,7 @@ export default function App() {
                 <Route path="*">
                     <Redirect to="/sign-in"/>
                 </Route>
-                
+             
                     
             </Switch>
         )

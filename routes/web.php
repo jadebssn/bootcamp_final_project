@@ -20,8 +20,9 @@ Route::view('/sign-up', 'auth.react-auth')->name('sign-up');
 //i added logout
 // Route::view('/logout', 'auth.react-auth')->name('logout');
 Route::view('/courses', 'auth.react-auth');
+Route::view('/course/{id}', 'auth.react-auth');
 //Route::get('/courses', 'CourseController@index');
-Route::get('/courses/{id}', 'CourseController@show');
+// Route::get('/courses/{id}', 'CourseController@show');
 
 
 //code bellow is an example for our courses reservation 
