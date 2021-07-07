@@ -7,11 +7,7 @@ export default function CourseDetail() {
     const [course, setCourse] = useState(null)
 
     const loadCourse = async () => {
-        const response = await fetch('/api/course/:id', {
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
+        const response = await fetch(`api/course/${id}`)
         const data = await response.json();
 
         setCourse(data);
