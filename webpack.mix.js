@@ -23,7 +23,7 @@ mix.js("resources/js/Auth/index.jsx", "public/js/auth.js").react();
 mix.sass("resources/scss/app.scss", "public/css").sass(
     "resources/scss/login.scss",
     "public/css/login.css"
-);
+).sass("resources/scss/Course.scss", "public/css/course.css")
 mix.browserSync({
     host: "localhost",
     port: 3000,

@@ -5,15 +5,15 @@ function Course(props) {
     
 
     return (
-        <div>
-            <Link to={`/course/${props.course.id}`}>TEST</Link>
-
-
-           <div>{props.course.title}</div>
-                <p>{props.course.description}</p>
-                
-        </div>
-        
+            <div className="course1">
+                <Link to={`/course/${props.course.id}`}>TEST</Link>
+                <h4>{props.course.title}</h4>
+                <button className="buttonplay"></button>
+                <div className="course_name">
+                    <p>{props.course.description}</p>
+                </div>
+                <img src="" />
+            </div>   
     )
 }
 

@@ -7,6 +7,7 @@
     <title>{{ $title }} | Final project</title>
 
     <link rel="stylesheet" href="{{ mix('css/login.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/course.css') }}">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
@@ -16,7 +17,7 @@
         'current' => $current_menu_item ?? null
     ])
 
-    <h1>Final project</h1>
+    
 
     
 

@@ -26,7 +26,7 @@ export default function Courses(props) {
 
     return (
         <div>
-        <h1>Courses</h1>
+        
         <Logout logoutCallback={props.logoutCallback} />
         
 
