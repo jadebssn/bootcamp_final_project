@@ -109,7 +109,7 @@ export default function Login({ loginCallback }) {
 
             <input type="password" name="password" value={ password } onChange={ handleChange } />
 
-            <button>Login</button>
+            <button className="button">Login</button>
 
         </form>
           <p>Not registered yet? <Link to="/sign-up">Sign up</Link></p>

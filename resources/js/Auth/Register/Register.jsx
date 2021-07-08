@@ -87,7 +87,7 @@ export default function Register(props) {
 
             <input type="password" name="password_confirmation" value={ password_confirmation } onChange={ handleChange } />
 
-            <button>Register</button>
+            <button className="button">Register</button>
 
         </form>
             <p>Already have an account? <Link to="/sign-in">Sign in</Link></p>
