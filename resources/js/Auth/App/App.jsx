@@ -7,6 +7,7 @@ import Register from '../Register/Register';
 import Courses from '../../Courses/Courses';
 import Welcome from '../../Welcome/Welcome';
 import CourseDetail from "../../CourseDetail/CourseDetail";
+import Question from "../../Question/Question";
 
 
 export default function App() {
@@ -67,18 +68,20 @@ export default function App() {
                 </Route>
 
                  <Route path="/course/:id">
-                    <CourseDetail/>
-                </Route> 
+                    <CourseDetail logoutCallback={() => {
+                        setUser(null);
+                    }}/>
+                </Route>
+                
+                <Route path="/question">
+                    <Question logoutCallback={() => {
+                        setUser(null);
+                    }}/>
+                </Route>  
 
                 <Route path="*">
                     <Redirect to="/courses"/>
                 </Route>
-
-                {/* <Route exact path="/course/:id">
-                    <CourseDetail  logoutCallback={() => {
-                        setUser(null);
-                    }}/>
-                </Route> */}
 
                
                 
@@ -86,10 +89,10 @@ export default function App() {
         ) : (
             
             <Switch>
-                    <Route exact path="/">
+                <Route exact path="/">
                         <Welcome />
-                    {/* <h1>Home</h1> */}
                 </Route>
+                    
                 <Route exact path="/sign-in">
                     <Login loginCallback={ (user) => {
                         setUser(user);

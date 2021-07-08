@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Course;
+use App\Models\Question;
 
 class CourseController extends Controller
 {
@@ -21,5 +22,15 @@ class CourseController extends Controller
         $course = Course::findOrFail($id);
 
         return $course;
+    }
+
+    public function question()
+    {
+        $questions = Question::all();
+
+        return $questions;
+
+       
+        // dd($questions);
     }
 }
