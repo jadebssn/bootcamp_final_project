@@ -33,7 +33,7 @@ export default function CourseDetail(props) {
             <p>{course?.description}</p>
             <Link to="/courses">Courses</Link>
             <Logout logoutCallback={props.logoutCallback} />
-            <Link to='/question'>TEST</Link>
+            <Link to={`/course/${course?.id}/test`}>TEST</Link>
 
         </div>
     )

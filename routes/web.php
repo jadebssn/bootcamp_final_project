@@ -22,5 +22,5 @@ Route::view('/courses', 'auth.react-auth');
 Route::view('/course/{id}', 'auth.react-auth');
 
 
-Route::view('/question', 'auth.react-auth'); //added now
+Route::view('/course/{id}/test', 'auth.react-auth'); //added now
 

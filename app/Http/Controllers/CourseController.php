@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Course;
 use App\Models\Question;
+use App\Models\Test;
 
 class CourseController extends Controller
 {
@@ -33,4 +34,11 @@ class CourseController extends Controller
        
         // dd($questions);
     }
+
+    public function test($course_id){
+        $test = Test::with('questions')->with('questions.options')->where('course_id',$course_id)->first();
+
+        return $test;
+    }
+    
 }

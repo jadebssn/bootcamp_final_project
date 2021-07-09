@@ -8,6 +8,7 @@ import Courses from '../../Courses/Courses';
 import Welcome from '../../Welcome/Welcome';
 import CourseDetail from "../../CourseDetail/CourseDetail";
 import Question from "../../Question/Question";
+import Test from '../../Test/Test';
 
 
 export default function App() {
@@ -67,14 +68,14 @@ export default function App() {
                     }}/>
                 </Route>
 
-                 <Route path="/course/:id">
+                 <Route exact path="/course/:id">
                     <CourseDetail logoutCallback={() => {
                         setUser(null);
                     }}/>
                 </Route>
                 
-                <Route path="/question">
-                    <Question logoutCallback={() => {
+                <Route exact path="/course/:course_id/test">
+                    <Test logoutCallback={() => {
                         setUser(null);
                     }}/>
                 </Route>  
