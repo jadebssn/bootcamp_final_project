@@ -1,0 +1,14 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom:  1px solid black;
+    
+
+    .userName {
+        text-decoration: none;
+    }
+
+    
+}

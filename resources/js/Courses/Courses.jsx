@@ -1,4 +1,4 @@
-import Logout from "../Auth/Logout/Logout";
+
 import Course from "../Course/Course";
 import { useState, useEffect } from "react";
 
@@ -25,36 +25,13 @@ export default function Courses(props) {
 
 
     return (
-        <div>
         
-        <Logout logoutCallback={props.logoutCallback} />
-        
-
+        <div className="courses_container">
             {coursesList.map((course, i) => (<Course key={i} course={course} />))}
-            
-            
-            {/* {new Array(4).fill(null).map((course, i) => (<Course course={course} />))} */}
-
-        
         </div>
+    
     )
 
     
 }
 
-
-// import { useHistory } from "react-router-dom";
-
-// export default function Cources() {
-//   let history = useHistory();
-
-//   function handleClick() {
-//     history.push("/home");
-//   }
-
-//   return (
-//     <button type="button" onClick={handleClick}>
-//       Go home
-//     </button>
-//   );
-// }

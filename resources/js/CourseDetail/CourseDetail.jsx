@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Logout from "../Auth/Logout/Logout";
+
 
 export default function CourseDetail(props) {
     let { id } = useParams();
@@ -28,12 +28,13 @@ export default function CourseDetail(props) {
     console.log(course)
 
     return (
-        <div>
+        <div className="courseDetail">
             <h4>{course?.title}</h4>
             <p>{course?.description}</p>
-            <Link to="/courses">Courses</Link>
-            <Logout logoutCallback={props.logoutCallback} />
-            <Link to={`/course/${course?.id}/test`}>TEST</Link>
+            <div className="navBottom">
+                <Link to="/courses">Courses</Link>
+                <Link to={`/course/${course?.id}/test`}>TEST</Link>
+            </div>
 
         </div>
     )

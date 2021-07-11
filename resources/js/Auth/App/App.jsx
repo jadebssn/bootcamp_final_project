@@ -9,6 +9,8 @@ import Welcome from '../../Welcome/Welcome';
 import CourseDetail from "../../CourseDetail/CourseDetail";
 import Question from "../../Question/Question";
 import Test from '../../Test/Test';
+import Nav from '../../Nav/Nav';
+import UserInfo from '../../UserInfo/UserInfo';
 
 
 export default function App() {
@@ -52,7 +54,14 @@ export default function App() {
     return (
 
         user ? (
+            <>
+             <Nav
+                user={user}
+              logoutCallback={() => {
+                        setUser(null);
+                    }}/>
             <Switch>
+               
                 <Route exact path="/">
                     <Welcome />
                 </Route>
@@ -60,6 +69,10 @@ export default function App() {
                     <Courses  logoutCallback={() => {
                         setUser(null);
                     }}/>
+                </Route>
+
+                <Route exact path="/user-info">
+                    <UserInfo />
                 </Route>
 
                 <Route exact path="/logout">
@@ -87,6 +100,7 @@ export default function App() {
                
                 
             </Switch>
+            </>
         ) : (
             
             <Switch>

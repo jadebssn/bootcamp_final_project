@@ -8,6 +8,10 @@
 
     <link rel="stylesheet" href="{{ mix('css/login.css') }}">
     <link rel="stylesheet" href="{{ mix('css/course.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/courses.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/nav.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/logout.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/coursedetail.css') }}">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>

@@ -20,10 +20,13 @@ mix.js("resources/js/app.js", "public/js");
     ]
 );*/
 mix.js("resources/js/Auth/index.jsx", "public/js/auth.js").react();
-mix.sass("resources/scss/app.scss", "public/css").sass(
-    "resources/scss/login.scss",
-    "public/css/login.css"
-).sass("resources/scss/Course.scss", "public/css/course.css")
+mix.sass("resources/scss/app.scss", "public/css")
+    .sass("resources/scss/login.scss", "public/css/login.css")
+    .sass("resources/scss/Course.scss", "public/css/course.css")
+    .sass("resources/scss/Courses.scss", "public/css/courses.css")
+    .sass("resources/scss/Nav.scss", "public/css/nav.css")
+    .sass("resources/scss/Logout.scss", "public/css/logout.css")
+    .sass("resources/scss/CourseDetail.scss", "public/css/coursedetail.css");
 mix.browserSync({
     host: "localhost",
     port: 3000,
