@@ -32,8 +32,8 @@ export default function CourseDetail(props) {
             <h4>{course?.title}</h4>
             <p>{course?.description}</p>
             <div className="navBottom">
-                <Link to="/courses">Courses</Link>
-                <Link to={`/course/${course?.id}/test`}>TEST</Link>
+                <Link to="/courses" className="buttonBottom">Courses</Link>
+                <Link to={`/course/${course?.id}/test`} className="buttonBottom">TEST</Link>
             </div>
 
         </div>

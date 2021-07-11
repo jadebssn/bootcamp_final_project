@@ -1,6 +1,7 @@
 import Question from "../Question/Question";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Test() {
     let { course_id } = useParams();
@@ -24,10 +25,11 @@ export default function Test() {
 
     }, []);
 
-    console.log(test)
+    console.log(test.questions)
     return (
         <div>
             <Question test={test}/>
+            <Link to="/courses">Courses</Link>
         </div>
     )
 }

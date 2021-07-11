@@ -7,6 +7,12 @@
         display: flex;
         width: 80%;
         justify-content: space-between;
+        
+        .buttonBottom {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+        }
 
     }
 }
