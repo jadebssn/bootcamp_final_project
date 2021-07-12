@@ -9,9 +9,13 @@ export default function Test() {
     const [test, setTest] = useState([])
 
     const loadTestList = async () => {
+
+        const token = localStorage.getItem('my_token');
+        
         const response = await fetch(`/api/test/${course_id}`, {
             headers: {
-                'Accept': 'application/json'
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${token}`,
             }
         });
         const data = await response.json();

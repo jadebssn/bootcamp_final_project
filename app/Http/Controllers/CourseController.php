@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Course;
 use App\Models\Question;
 use App\Models\Test;
+use Illuminate\Support\Facades\Auth;
+
+use App\Models\TestUser;
 
 class CourseController extends Controller
 {
@@ -37,6 +40,12 @@ class CourseController extends Controller
 
     public function test($course_id){
         $test = Test::with('questions')->with('questions.options')->where('course_id',$course_id)->first();
+
+        $test_user = TestUser::create([
+            'user_id' => Auth::user()->id,
+            'test_id' => $test->id,
+            'score' => 0
+        ]);
 
         return $test;
     }
