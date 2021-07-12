@@ -49,5 +49,9 @@ class CourseController extends Controller
 
         return $test;
     }
+
+    public function testSubmit (){
+        return "hi";
+    }
     
 }
