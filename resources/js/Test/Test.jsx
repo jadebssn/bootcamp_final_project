@@ -27,7 +27,7 @@ export default function Test() {
 
     console.log(test.questions)
     return (
-        <div>
+        <div className="test">
             <Question test={test}/>
             <Link to="/courses">Courses</Link>
         </div>
