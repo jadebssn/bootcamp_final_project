@@ -23,6 +23,7 @@ Route::get('user', 'UserController@user')->middleware('auth:sanctum');
 Route::post('logout', 'UserController@logout')->middleware('auth:sanctum');
 Route::get('courses', 'CourseController@index');
 Route::get('course/{id}', 'CourseController@show');
-Route::get('question', 'CourseController@question'); //added now
-Route::get('test/{course_id}', 'CourseController@test')->middleware('auth:sanctum'); //added now
+Route::get('question', 'CourseController@question'); 
+Route::get('test/{course_id}', 'CourseController@test')->middleware('auth:sanctum'); 
 
+Route::post('submit', 'UserController@submit');

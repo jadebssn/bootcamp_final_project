@@ -13,6 +13,7 @@ import Nav from '../../Nav/Nav';
 import UserInfo from '../../UserInfo/UserInfo';
 
 
+
 export default function App() {
 
     const [user, setUser] = useState(null);
@@ -91,7 +92,8 @@ export default function App() {
                     <Test logoutCallback={() => {
                         setUser(null);
                     }}/>
-                </Route>  
+                    </Route>
+
 
                 <Route path="*">
                     <Redirect to="/courses"/>

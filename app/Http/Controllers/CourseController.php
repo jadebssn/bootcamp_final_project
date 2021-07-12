@@ -9,6 +9,9 @@ use App\Models\Test;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\TestUser;
+use App\Models\TestUserAnswer;
+use App\Models\Option;
+
 
 class CourseController extends Controller
 {
@@ -50,8 +53,13 @@ class CourseController extends Controller
         return $test;
     }
 
-    public function testSubmit (){
-        return "hi";
+    public function submit($id){
+
+        $test_user_answer = TestUserAnswer::create([
+            'test_user_id' => TestUser::findOrFail($id),
+            'option_id' => Option::findOrFail($id)
+        ]);
+        
     }
     
 }
