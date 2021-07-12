@@ -1,25 +1,19 @@
-import { useState } from "react"
+import { useState } from "react";
+
 export default function Options(props) {
 
-    const [options, setOptions] = useState([])
+    const [option, setOption] = useState(0)
 
-    const loadOptions = async () => {
-        const response = await fetch(`/api/test/${course_id}/${option_id}`, {
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-        const data = await response.json();
+ 
 
-        setOptions(data);
-    }
+    console.log(option)
 
 
     return (
         <>
             {
                 props.question.options.map((option, i) => (
-                <p key={i}>{option.text }</p>
+                <p key={option.id} onClick={()=> {setOption(option.is_correct)}}>{option.text}</p>
             ))}
         </>
     )

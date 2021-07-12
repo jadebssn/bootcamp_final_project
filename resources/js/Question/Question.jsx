@@ -7,10 +7,10 @@ export default function Question(props) {
     return (
         <div>
             {props.test.questions?.map((question, i) => (
-                <>
-                <p key={i}>{question.text}</p>
+                <div key={i}>
+                    <p>{question.text}</p>
                     <Option question={question} />
-                </>
+                </div>
             ))}
             
            
