@@ -26,4 +26,4 @@ Route::get('course/{id}', 'CourseController@show');
 Route::get('question', 'CourseController@question'); 
 Route::get('test/{course_id}', 'CourseController@test')->middleware('auth:sanctum'); 
 
-Route::post('submit', 'UserController@submit');
+Route::post('submit/{id}', 'CourseController@submit')->middleware('auth:sanctum');

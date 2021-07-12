@@ -1,19 +1,21 @@
 import { useState } from "react";
 
 export default function Options(props) {
+    
 
     const [optionId, setOptionId] = useState(0)
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        const token = localStorage.getItem('my_token');
 
-        const response = await fetch(``, {
+        const response = await fetch(`/api/submit/${optionId}`, {
             method: 'POST',
-            body: JSON.stringify(optionId),
             headers: {
                 'Accept': 'application/json',
                 'Content-type': 'application/json',
-                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                'Authorization': `Bearer ${token}`
             },
         })
 

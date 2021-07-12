@@ -11,8 +11,14 @@ class Question extends Model
     
     
     use HasFactory;
+
     public function Options()
     {
         return $this->hasMany(Option::class);
+    }
+
+
+    public function test(){
+        return $this->belongsTo(Test::class);
     }
 }
