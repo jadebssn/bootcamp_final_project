@@ -40,12 +40,13 @@ body {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     background: #b3cbc9;
-    width: 100%;
+    // width: 100%;
     border: 0;
     padding: 15px;
     color: #ffffff;
     font-size: 14px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .home__button {
@@ -57,7 +58,6 @@ body {
     padding: 15px;
     color: #ffffff;
     font-size: 14px;
-    color: white;
     text-decoration: none;
     cursor: pointer;
 }

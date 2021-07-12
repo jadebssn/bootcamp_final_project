@@ -5,7 +5,7 @@ export default function Question(props) {
     console.log(props.test.questions)
  
     return (
-        <div>
+        <div className="quiz-question">
             {props.test.questions?.map((question, i) => (
                 <div key={i}>
                     <p>{question.text}</p>

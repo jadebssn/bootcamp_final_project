@@ -29,12 +29,16 @@ export default function Options(props) {
     console.log(optionId)
 
     return (
-        <>
+        <div>
             {
                 props.question.options.map((option, i) => (
-                <p key={option.id} onClick={()=> {setOptionId(option.id)}}>{option.text}</p>
+
+                <ul>
+                    <li className="quiz-answer" key={option.id} onClick={()=> {setOptionId(option.id)}}>{option.text}</li>
+                </ul>
             ))}
-            <button onClick={handleSubmit}>Submit answer</button>
-        </>
+            <span><button className="button" onClick={handleSubmit}>Submit answer</button></span>
+
+        </div>
     )
 }

@@ -31,9 +31,19 @@ export default function Test() {
 
     console.log(test.questions)
     return (
-        <div className="test">
+        <>
+        <div className="quiz">
+      {/* <h2>{Coursetitle}: Test your knowledge!</h2> */}
+      <Question test={test}/>
+      {/* <div className="button__container"> */}
+        <span><Link to="/courses" className="button">Courses</Link></span>
+        
+      {/* </div> */}
+    </div>
+        {/* <div className="test">
             <Question test={test}/>
-            <Link to="/courses">Courses</Link>
-        </div>
+            
+        </div> */}
+        </>
     )
 }

@@ -3,3 +3,51 @@
     flex-direction: column;
     align-items: center;
 }
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-image: linear-gradient(to right, #f2f2f2, #b3cbc9);
+}
+.quiz {
+    padding: 0 30px 20px 30px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.quiz-question {
+    font-weight: bold;
+    display: block;
+    padding: 30px 0 10px 0;
+    margin: 0;
+}
+.quiz-answer {
+    margin: 0;
+    padding: 10px;
+    background: #b3cbc9;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.quiz-answer:hover {
+    background: #869693;
+}
+.button__container {
+    display: flex;
+    justify-content: space-between;
+}
+// button {
+//     font-family: "Roboto", sans-serif;
+//     text-transform: uppercase;
+
+//     background: #b3cbc9;
+//     border: 0;
+//     padding: 15px;
+//     color: #ffffff;
+//     font-size: 14px;
+
+//     cursor: pointer;
+// }
