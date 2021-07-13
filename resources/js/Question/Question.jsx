@@ -13,8 +13,9 @@ export default function Question(props) {
         event.preventDefault();
         const token = localStorage.getItem('my_token');
 
-        const response = await fetch(`/api/submit/${listOptionId}`, {
+        const response = await fetch(`/api/submit/${props.test.id}`, {
             method: 'POST',
+            body: JSON.stringify({options: listOptionId}),
             headers: {
                 'Accept': 'application/json',
                 'Content-type': 'application/json',

@@ -53,19 +53,20 @@ class CourseController extends Controller
         return $test;
     }
 
-    public function submit($id){
+    public function submit($test_id, Request $request){
 
-        $option = Option::findOrFail($id);
-        $question = $option->question;
-        $test = $question->test;
+        $test = Test::findOrFail($test_id);
 
         $test_user = TestUser::where('test_id', $test->id)->where('user_id', Auth::user()->id)->firstOrFail();
 
-        $test_user_answer = TestUserAnswer::create([
-            'test_user_id' => $test_user->id,
-            'option_id' => $option->id,
-        ]);
+        $options = $request->input('options');
         
+        foreach($options as $option){
+            TestUserAnswer::create([
+                'test_user_id' => $test_user->id,
+                'option_id' => $option,
+            ]);
+        }        
     }
     
 }
