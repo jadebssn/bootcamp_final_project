@@ -35,6 +35,15 @@ ul {
 .quiz-answer:hover {
     background: #869693;
 }
+
+.quiz-answer-selected {
+    margin: 0;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    background: #869693;
+}
+
 .button__container {
     display: flex;
     justify-content: space-between;

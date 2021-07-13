@@ -4,6 +4,7 @@ export default function Options(props) {
     
 
     const [optionId, setOptionId] = useState(0)
+    const [className, setClassName] = useState("quiz-answer")
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -27,18 +28,28 @@ export default function Options(props) {
     }
 
     console.log(optionId)
+    const changingBackground = () => {
+        if (className === "quiz-answer") {
+            setClassName ("quiz-answer-selected")
+        } else {setClassName("quiz-answer")}
+    }
 
     return (
         <div>
+            <ul>
             {
                 props.question.options.map((option, i) => (
-
-                <ul>
-                    <li className="quiz-answer" key={option.id} onClick={()=> {setOptionId(option.id)}}>{option.text}</li>
-                </ul>
-            ))}
+                    <li
+                        className={ option.id === optionId ? "quiz-answer-selected" :  "quiz-answer" }
+                        key={option.id}
+                        onClick={()=> {
+                            setOptionId(option.id);
+                        }}   
+                    >{option.text}</li>
+                ))
+            }
+            </ul>
             <span><button className="button" onClick={handleSubmit}>Submit answer</button></span>
-
         </div>
     )
 }
