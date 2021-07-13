@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function Test() {
     let { course_id } = useParams();
 
-    const [test, setTest] = useState([])
+    const [test, setTest] = useState(null)
 
     const loadTestList = async () => {
 
@@ -29,12 +29,17 @@ export default function Test() {
 
     }, []);
 
-    console.log(test.questions)
+
     return (
         <>
         <div className="quiz">
       {/* <h2>{Coursetitle}: Test your knowledge!</h2> */}
-      <Question test={test}/>
+      {
+          test != null ? (
+                <Question test={test}/> 
+          ) : null
+      }
+      
       {/* <div className="button__container"> */}
         {/* <span><Link to="/courses" className="button">Courses</Link></span> */}
         

@@ -3,7 +3,8 @@ import { useState } from "react";
 
 export default function Question(props) {
 
-    const [listOptionId, setListOptionId] = useState([])
+    const [listOptionId, setListOptionId] = useState( (new Array(props.test.questions.length)).fill(null));
+
 
 
  
@@ -35,7 +36,7 @@ export default function Question(props) {
             {props.test.questions?.map((question, i) => (
                 <div key={i}>
                     <p>{question.text}</p>
-                    <Option question={question} setListOptionId={setListOptionId} listOptionId={listOptionId}
+                    <Option question={question} questionNumber={i} setListOptionId={setListOptionId} listOptionId={listOptionId}
                     />
                 </div>
             ))}

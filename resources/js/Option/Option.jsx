@@ -7,10 +7,16 @@ export default function Options(props) {
             {
                 props.question.options.map((option, i) => (
                     <li
-                        className={ option.id === props.listOptionId ? "quiz-answer-selected" :  "quiz-answer" }
+                        className={ option.id === props.listOptionId[ props.questionNumber] ? "quiz-answer-selected" :  "quiz-answer" }
                         key={option.id}
                         onClick={()=> {
-                           props.setListOptionId([...props.listOptionId, option.id]);
+
+                            console.log('set option', props.questionNumber, option.id );
+
+                            props.setListOptionId(
+                                props.listOptionId.map( (old, index) => index === props.questionNumber ? option.id : old )
+                            )
+                          // props.setListOptionId([...props.listOptionId, option.id]);
                         }}   
                     >{option.text}</li>
                 ))
