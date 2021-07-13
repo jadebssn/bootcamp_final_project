@@ -36,7 +36,7 @@ export default function Test() {
       {/* <h2>{Coursetitle}: Test your knowledge!</h2> */}
       <Question test={test}/>
       {/* <div className="button__container"> */}
-        <span><Link to="/courses" className="button">Courses</Link></span>
+        {/* <span><Link to="/courses" className="button">Courses</Link></span> */}
         
       {/* </div> */}
     </div>
