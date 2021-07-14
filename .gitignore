@@ -18,3 +18,4 @@ problem files into .gitignor
 /public/css
 /public/images
 /public/mix-manifest.json
+phploy.ini
