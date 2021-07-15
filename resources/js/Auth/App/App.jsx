@@ -14,6 +14,7 @@ import UserInfo from '../../UserInfo/UserInfo';
 
 
 
+
 export default function App() {
 
     const [user, setUser] = useState(null);
@@ -93,7 +94,6 @@ export default function App() {
                         setUser(null);
                     }}/>
                     </Route>
-
 
                 <Route path="*">
                     <Redirect to="/courses"/>

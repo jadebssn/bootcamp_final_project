@@ -2,6 +2,7 @@ import Question from "../Question/Question";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Results from '../Results/Results';
 
 export default function Test() {
     let { course_id } = useParams();
@@ -33,22 +34,16 @@ export default function Test() {
     return (
         <>
         <div className="quiz">
-      {/* <h2>{Coursetitle}: Test your knowledge!</h2> */}
+     
       {
           test != null ? (
                 <Question test={test}/> 
           ) : null
       }
-      
-      {/* <div className="button__container"> */}
-        {/* <span><Link to="/courses" className="button">Courses</Link></span> */}
-        
-      {/* </div> */}
+                
+     
     </div>
-        {/* <div className="test">
-            <Question test={test}/>
-            
-        </div> */}
+        <Results/>
         </>
     )
 }

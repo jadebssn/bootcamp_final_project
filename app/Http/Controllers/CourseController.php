@@ -68,5 +68,9 @@ class CourseController extends Controller
             ]);
         }        
     }
+
+    public function result($option_id, Request $request){
+        $result = TestUserAnswer::findOrFail($option_id);
+    }
     
 }
