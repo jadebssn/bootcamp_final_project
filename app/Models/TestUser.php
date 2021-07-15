@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\TestUserAnswer;
 
+
 class TestUser extends Model
 {
     use HasFactory;
@@ -38,4 +39,8 @@ class TestUser extends Model
     public function scopeUnfinished($query){
         return $query->whereNull('finished_at');
     }
+
+    // public function score(){
+    //     return $this->hasMany(TestUserAnswer::class); //added now
+    // }
 }

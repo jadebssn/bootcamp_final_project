@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import Video from "../Video/Video";
 
 export default function CourseDetail(props) {
     
@@ -35,7 +35,9 @@ export default function CourseDetail(props) {
         return (
             <div className="courseDetail">
                 <h4>{course?.title}</h4>
+                <Video embedId={`rokGy0huYEA`}/>
                 <p>{course?.description}</p>
+
                 <div className="navBottom">
                     <Link to={`/course/${course?.id}/test`} className="buttonBottom">TEST</Link>
                 </div>

@@ -30,6 +30,7 @@ export default function Question(props) {
         if (data.errors) {
             // display errors ...
         }
+        props.resultsReady(data.test_user_id);
     }
     console.log(listOptionId);
  

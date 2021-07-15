@@ -8,7 +8,8 @@ export default function Test() {
     let { course_id } = useParams();
 
     const [test, setTest] = useState(null)
-
+    const [displayResults, setDisplayResults] = useState(false)
+    const [testUserId, setTestUserId] = useState(null)
     const loadTestList = async () => {
 
         const token = localStorage.getItem('my_token');
@@ -30,20 +31,26 @@ export default function Test() {
 
     }, []);
 
-
+    const resultsReady = (test_user_id) => {
+setTestUserId(test_user_id);
+        setDisplayResults(true);
+        
+        console.log(test_user_id)
+}
     return (
         <>
         <div className="quiz">
      
       {
           test != null ? (
-                <Question test={test}/> 
+                <Question test={test} resultsReady={resultsReady}/> 
           ) : null
       }
                 
      
     </div>
-        <Results/>
+        {displayResults?<Results testUserId={testUserId}/>:''}
         </>
     )
+    
 }

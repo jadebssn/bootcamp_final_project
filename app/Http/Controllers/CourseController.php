@@ -71,13 +71,18 @@ class CourseController extends Controller
                 'option_id' => $option,
             ]);
         }
-        $test_user->evaluate();        
+
+        $test_user->evaluate();
+           
+       return[
+           'status'=>'ok', 
+           'test_user_id'=> $test_user->id
+       ];
     }
 
-    // public function result($option_id, Request $request){
-    //     $result = TestUserAnswer::with('options')->with('test_id')->where('is_correct')->get();
-    //     $option_id = $request->input('is_correct');
-    //     return $result;
-    // }
-    
-}
+    public function calculateResult(){
+        
+    }
+       
+    }
+
