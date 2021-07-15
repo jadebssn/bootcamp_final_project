@@ -4,8 +4,20 @@
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid black;
+    padding-bottom: 10px;
 
     .userName {
+        text-transform: uppercase;
+        background: #869693;
+        border: 0;
+        padding: 15px;
+        color: #ffffff;
+        font-size: 14px;
         text-decoration: none;
+        cursor: pointer;
     }
+}
+.user__profile {
+    padding: 20px;
+    text-decoration: none;
 }

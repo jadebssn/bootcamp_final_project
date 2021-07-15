@@ -12,6 +12,22 @@
             text-decoration: none;
             color: black;
             background-color: white;
+            text-transform: uppercase;
+            background: #869693;
+            border: 0;
+            padding: 15px;
+            color: #ffffff;
+            font-size: 14px;
+            text-decoration: none;
+            cursor: pointer;
+            margin-bottom: 2em;
         }
     }
+}
+.coursedetail__title {
+    text-decoration: none;
+    font-size: 25px;
+}
+.coursedetail__description {
+    margin-top: 0;
 }

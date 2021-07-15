@@ -6,10 +6,11 @@ export default function Nav(props) {
         <div className="nav">
             <Link to="/courses" className="userName">Back to courses</Link>
             <div className="nav__buttons">
-                <Link to="/user-info" className="userName">{props.user.name} profile</Link>
-                <Logout logoutCallback={props.logoutCallback}/>
+                <Link to="/user-info" className="user__profile">{props.user.name} profile</Link>
+                <Logout className="userName" logoutCallback={props.logoutCallback}/>
             </div>
             
         </div>
+        
     )
 }

@@ -66,10 +66,13 @@ class CourseController extends Controller
         $test_user->testUserAnswers()->delete();
 
         foreach($options as $option){
-            TestUserAnswer::create([
+            if($option ){
+                 TestUserAnswer::create([
                 'test_user_id' => $test_user->id,
                 'option_id' => $option,
             ]);
+            }
+           
         }
 
         $test_user->evaluate();
@@ -80,10 +83,13 @@ class CourseController extends Controller
        ];
     }
 
-    public function calculate(){
-        $totalScore = 300;
-        $correctAnswer = TestUser::get('score');
-        return $correctAnswer;
+    public function result($test_user_id){
+        $test_user= TestUser::findOrFail($test_user_id);
+        $max= $test_user->test->questions()->count() * 100;
+        return[
+            'max'=>$max,
+            'score'=>$test_user->score
+        ];
     }
        
     }

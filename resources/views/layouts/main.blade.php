@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ mix('css/coursedetail.css') }}">
     <link rel="stylesheet" href="{{ mix('css/test.css') }}">
     <link rel="stylesheet" href="{{ mix('css/results.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/footer.css') }}">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>

@@ -11,6 +11,7 @@ import Question from "../../Question/Question";
 import Test from '../../Test/Test';
 import Nav from '../../Nav/Nav';
 import UserInfo from '../../UserInfo/UserInfo';
+import Footer from '../../Footer/Footer';
 
 
 
@@ -102,6 +103,7 @@ export default function App() {
                
                 
             </Switch>
+            <Footer/>
             </>
         ) : (
             
@@ -126,6 +128,9 @@ export default function App() {
              
                     
             </Switch>
+
         )
+            
+
     )
 }

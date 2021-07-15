@@ -25,14 +25,11 @@ console.log(result)
 
         return (
             result ? (
-            // <p>Your score is {result.score} / {result.max}</p>): ''
-            <div className="result">
-                <p>Your score is </p> 
-                {result.map((result, i) => (<p className="result__number">{result.score} </p>))}
-                
-            </div>
-            
-            ): ''
+            <div className="result" >
+                <p>Your score is </p>
+                <p className="result__number">{result.score} / {result.max}</p>
+            </div>)
+            : ''
         )
 
-}
+            }

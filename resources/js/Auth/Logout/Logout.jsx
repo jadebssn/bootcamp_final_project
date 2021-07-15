@@ -31,7 +31,7 @@ export default function Logout({ logoutCallback }) {
     }
 
     return (
-        <button className="logout" onClick={ handleClick }>Logout</button>
+        <button className="userName" onClick={ handleClick }>Logout</button>
     )
 
 }

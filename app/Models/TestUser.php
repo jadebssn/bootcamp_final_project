@@ -27,7 +27,7 @@ class TestUser extends Model
                 $score -= 100;
             }
         }
-        $this->score = $score;
+        $this->score = max(0, $score);
         $this->finished_at = date('Y-m-d H:i:s');
         $this->save();
     }
@@ -39,6 +39,8 @@ class TestUser extends Model
     public function scopeUnfinished($query){
         return $query->whereNull('finished_at');
     }
-
+    public function test(){
+        return $this->belongsTo(Test::class);
+    }
  
 }
