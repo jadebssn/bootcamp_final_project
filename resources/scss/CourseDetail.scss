@@ -6,13 +6,12 @@
     .navBottom {
         display: flex;
         width: 80%;
-        justify-content: space-between;
-        
+        justify-content: flex-end;
+
         .buttonBottom {
             text-decoration: none;
             color: black;
             background-color: white;
         }
-
     }
 }

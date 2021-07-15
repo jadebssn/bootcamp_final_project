@@ -43,12 +43,16 @@ class CourseController extends Controller
 
     public function test($course_id){
         $test = Test::with('questions')->with('questions.options')->where('course_id',$course_id)->first();
-
+        $test_user = TestUser::where('user_id',Auth::user()->id)->where('test_id', $test->id)->unfinished()->first();
+        if(!$test_user){
         $test_user = TestUser::create([
             'user_id' => Auth::user()->id,
             'test_id' => $test->id,
             'score' => 0
         ]);
+        }
+
+       
 
         return $test;
     }
@@ -57,20 +61,23 @@ class CourseController extends Controller
 
         $test = Test::findOrFail($test_id);
 
-        $test_user = TestUser::where('test_id', $test->id)->where('user_id', Auth::user()->id)->firstOrFail();
-
+        $test_user = TestUser::where('user_id',Auth::user()->id)->where('test_id', $test->id)->unfinished()->firstOrFail();
         $options = $request->input('options');
-        
+        $test_user->testUserAnswers()->delete();
+
         foreach($options as $option){
             TestUserAnswer::create([
                 'test_user_id' => $test_user->id,
                 'option_id' => $option,
             ]);
-        }        
+        }
+        $test_user->evaluate();        
     }
 
-    public function result($option_id, Request $request){
-        $result = TestUserAnswer::findOrFail($option_id);
-    }
+    // public function result($option_id, Request $request){
+    //     $result = TestUserAnswer::with('options')->with('test_id')->where('is_correct')->get();
+    //     $option_id = $request->input('is_correct');
+    //     return $result;
+    // }
     
 }
