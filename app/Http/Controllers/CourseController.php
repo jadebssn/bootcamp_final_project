@@ -80,9 +80,14 @@ class CourseController extends Controller
        ];
     }
 
-    public function calculateResult(){
-        
+    public function calculate(){
+        $totalScore = 300;
+        $correctAnswer = TestUser::get('score');
+        return $correctAnswer;
     }
        
     }
+
+    
+    
 

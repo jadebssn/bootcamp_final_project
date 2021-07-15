@@ -21,11 +21,17 @@ const loadResults = async () => {
 
         setResults(data);
 }    
-
+console.log(result)
 
         return (
             result ? (
-            <p>Your score is {result.score} / {result.max}</p>): ''
+            // <p>Your score is {result.score} / {result.max}</p>): ''
+            <div className="result">
+                <p>Your score is </p> 
+                <p className="result__number">{result[2].score} </p>
+            </div>
+            
+            ): ''
         )
 
 }

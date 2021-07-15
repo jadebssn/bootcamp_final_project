@@ -40,7 +40,5 @@ class TestUser extends Model
         return $query->whereNull('finished_at');
     }
 
-    // public function score(){
-    //     return $this->hasMany(TestUserAnswer::class); //added now
-    // }
+ 
 }

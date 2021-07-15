@@ -27,7 +27,9 @@ mix.sass("resources/scss/app.scss", "public/css")
     .sass("resources/scss/Nav.scss", "public/css/nav.css")
     .sass("resources/scss/Logout.scss", "public/css/logout.css")
     .sass("resources/scss/CourseDetail.scss", "public/css/coursedetail.css")
-    .sass("resources/scss/Test.scss", "public/css/test.css");
+    .sass("resources/scss/Test.scss", "public/css/test.css")
+    .sass("resources/scss/results.scss", "public/css/results.css");
+
 mix.browserSync({
     host: "localhost",
     port: 3000,

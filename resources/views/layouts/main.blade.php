@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ mix('css/logout.css') }}">
     <link rel="stylesheet" href="{{ mix('css/coursedetail.css') }}">
     <link rel="stylesheet" href="{{ mix('css/test.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/results.css') }}">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>

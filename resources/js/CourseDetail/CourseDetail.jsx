@@ -35,7 +35,7 @@ export default function CourseDetail(props) {
         return (
             <div className="courseDetail">
                 <h4>{course?.title}</h4>
-                <Video embedId={`rokGy0huYEA`}/>
+                <Video embedId={course?.video}/>
                 <p>{course?.description}</p>
 
                 <div className="navBottom">
