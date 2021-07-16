@@ -105,9 +105,9 @@ export default function Login({ loginCallback }) {
           <p>Find the best-suited courses for your career development</p>
           <form action="/login" method="post" onSubmit={ handleSubmit }>
 
-            <input type="email" name="email" value={ email } onChange={ handleChange } />
+            <input type="email" name="email" placeholder="email address"value={ email } onChange={ handleChange } />
 
-            <input type="password" name="password" value={ password } onChange={ handleChange } />
+            <input type="password" name="password" placeholder="password" value={ password } onChange={ handleChange } />
 
             <button className="button">Login</button>
 

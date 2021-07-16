@@ -79,13 +79,13 @@ export default function Register(props) {
           <p>Find the best-suited courses for your career development</p>
         <form action="/register" method="post" onSubmit={ handleSubmit }>
 
-            <input type="text" name="name" value={ name } onChange={ handleChange } />
+            <input type="text" name="name" placeholder="username" value={ name } onChange={ handleChange } />
 
-            <input type="email" name="email" value={ email } onChange={ handleChange } />
+            <input type="email" name="email" placeholder="email address" value={ email } onChange={ handleChange } />
 
-            <input type="password" name="password" value={ password } onChange={ handleChange } />
+            <input type="password" name="password" placeholder="password" value={ password } onChange={ handleChange } />
 
-            <input type="password" name="password_confirmation" value={ password_confirmation } onChange={ handleChange } />
+            <input type="password" name="password_confirmation" placeholder="password confirmation" value={ password_confirmation } onChange={ handleChange } />
 
             <button className="button">Register</button>
 
