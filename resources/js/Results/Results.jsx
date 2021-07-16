@@ -28,6 +28,7 @@ console.log(result)
             <div className="result" >
                 <p>Your score is </p>
                 <p className="result__number">{result.score} / {result.max}</p>
+                <p>{result.score == 300 ? "Good job!" : "Try again"}</p>
             </div>)
             : ''
         )
