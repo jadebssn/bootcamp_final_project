@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Video = ({ embedId }) => (
-  <div className="video-responsive">
+  <div>
     <iframe
       width="853"
       height="480"
