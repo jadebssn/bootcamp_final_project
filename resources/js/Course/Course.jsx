@@ -10,7 +10,7 @@ function Course(props) {
             <img className="course__img" src={props.course.img} />
                 <div className="course_name">
                     
-                    <p>{props.course.description}</p>
+                    <p className="course__description">{props.course.description}</p>
                     
                 </div>
                 
