@@ -24,7 +24,7 @@ class TestUser extends Model
             if($answer->option->is_correct){
                 $score += 100;
             } else {
-                $score -= 100;
+                // $score -= 100;
             }
         }
         $this->score = max(0, $score);
