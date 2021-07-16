@@ -34,11 +34,14 @@ export default function CourseDetail(props) {
 
         return (
             <div className="courseDetail">
-                    <h4 className="coursedetail__title">{course?.title}</h4>
-                    <p className="coursedetail__description">{course?.description}</p>
+                    <div className="coursedescription__wrap">
+                        <h4 className="coursedetail__title">{course?.title}</h4>
+                        <p className="coursedetail__description">{course?.description}</p>
+                    </div>
                 <Video embedId={course?.video}/>
                 
-
+                <br />
+                <br />
                 <div className="navBottom">
                     <Link to={`/course/${course?.id}/test`} className="buttonBottom">TEST YOUR KNOWLEDGE!</Link>
                 </div>

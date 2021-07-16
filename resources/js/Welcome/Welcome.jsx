@@ -36,9 +36,9 @@ export default function Welcome() {
           </svg>
           <br />
           <h2>Welcome to our project!</h2>
-          <div className="home__button"><Link to="/sign-in" >Sign in</Link></div>
+          <div className="home__button"><Link className="link__decoration" to="/sign-in" >Sign in</Link></div>
             <br/>
-        <div className="home__button"><Link to="/sign-up" >Sign up</Link></div>
+        <div className="home__button"><Link className="link__decoration" to="/sign-up" >Sign up</Link></div>
         </form>
       </div>
     </div>

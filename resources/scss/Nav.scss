@@ -15,9 +15,13 @@
         font-size: 14px;
         text-decoration: none;
         cursor: pointer;
+        &:hover {
+            box-shadow: 10px 10px 5px grey;
+        }
     }
 }
 .user__profile {
     padding: 20px;
     text-decoration: none;
+    color: black;
 }

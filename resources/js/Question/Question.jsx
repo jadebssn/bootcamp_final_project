@@ -43,7 +43,11 @@ export default function Question(props) {
                     />
                 </div>
             ))}
-            <span><button className="button" onClick={handleSubmit}>Submit answer</button></span>
+            <br />
+            <div className="submit__wrap">
+                <span><button className="submit__button"onClick={handleSubmit}>Submit answer</button></span>
+                <div></div>
+            </div>
            
         </div>
     )
